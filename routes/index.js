@@ -11,8 +11,9 @@ router.get('/home', function(req, res, next) {
   res.render('index', { title: 'Home'});
 });
 
-
-
+router.get('/login', function(req, res, next) {
+  res.render('index', { title: 'Login' })
+})
 
 /* GET Products page. */
 router.get('/products', function(req, res, next) {
