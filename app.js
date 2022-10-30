@@ -44,4 +44,8 @@ app.use(function(err, req, res, next) {
   res.render('error', { title: 'Error'});
 });
 
+app.post('/login', (req, res) => {
+  console.log(req.body);
+})
+
 module.exports = app;

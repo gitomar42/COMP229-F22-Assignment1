@@ -11,10 +11,6 @@ router.get('/home', function(req, res, next) {
   res.render('index', { title: 'Home'});
 });
 
-router.get('/login', function(req, res, next) {
-  res.render('index', { title: 'Login' })
-})
-
 /* GET Products page. */
 router.get('/products', function(req, res, next) {
   res.render('index', { title: 'Products'});
@@ -29,5 +25,13 @@ router.get('/services', function(req, res, next) {
 router.get('/contact', function(req, res, next) {
   res.render('index', { title: 'Contact'});
 });
+
+router.get('/login', (req, res, next) => {
+  return res.render('login', { title: 'Login'});
+});
+
+router.post('/login', (req, res, next) => {
+  console.log(req.body);
+})
 
 module.exports = router;
