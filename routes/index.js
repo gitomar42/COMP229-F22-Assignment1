@@ -32,6 +32,8 @@ router.get('/login', (req, res, next) => {
 
 router.post('/login', (req, res, next) => {
   console.log(req.body);
+  // if (login success)
+  res.redirect('/');
 })
 
 module.exports = router;
